@@ -11,13 +11,18 @@ export default function App() {
 
   return (
     <main className="App">
-      <NavBar user={user} setUser={setUser} />
-      <Routes>
-        <Route path="/" element={<HomePage user={user} />} />
-        <Route path="/auth" element={<AuthPage />} />
-        {/* additional Routes... */}
-        <Route path="/*" element={<Navigate to="/auth" />} />
-      </Routes>
+      {user ?
+        <>
+          <NavBar user={user} setUser={setUser} />
+          <Routes>
+            <Route path="/" element={<HomePage user={user} />} />
+            {/* additional Routes... */}
+            <Route path="/*" element={<Navigate to="/auth" />} />
+          </Routes>
+        </>
+        :
+        <AuthPage setUser={setUser} />
+      }
     </main>
   );
 }

@@ -2,6 +2,7 @@ body {
     background: #8676bb;
     background-size: 100%;
     height: 100%vh;
+    width: 100%;
 }
 
 
@@ -19,4 +20,9 @@ a:hover {
 footer {
     position: center;
 
+}
+
+img {
+    height: auto;
+    width: 100vmin;
 }

@@ -2,6 +2,8 @@
 :root {
   --background: rgb(225, 213, 255);
   --background: linear-gradient(0deg, rgba(225, 213, 255, 1) 0%, rgba(134, 118, 187, 0.9122242647058824) 50%, rgba(63, 15, 110, 0.9626444327731093) 100%);
+  --color: #3f0f6e;
+  --lightpurple: #E6E6FA; 
 }
 
 
@@ -20,4 +22,22 @@ a {
 a:hover {
   color: #3f0f6e;
 
+}
+.form-container {
+  padding: 3vmin;
+  background-color: var(--lightpurple);
+  border: .1vmin solid var(--color);
+  border-radius: 1vmin;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 1.25vmin;
+  color: var(--color);
+}
+button {
+  border-radius: 5px;
+  border-color: var(--color);
+  background-image: linear-gradient(to right, rgb(171, 139, 230), rgb(84, 24, 154));
+  color: var(--color);
 }

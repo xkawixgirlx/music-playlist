@@ -1,19 +1,26 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as playlistsAPI from '../../utilities/playlist-api';
+import PlayListForm from '../../components/PlayListForm/PlayListForm';
 
 
 export default function PlayListPage() {
     const [playlists, setPlaylists] = useState([]);
-    const {playlistId} = useParams();
+    const { playlistId } = useParams();
 
-useEffect(function () {
-    async function getPlaylist() {
-        const playlists = await playlistsAPI.getAll();
-        setPlaylists(playlists);
+    useEffect(function () {
+        async function getPlaylist() {
+            const playlists = await playlistsAPI.getAll();
+            setPlaylists(playlists);
+        }
+        getPlaylist();
+    }, [playlistId])
+
+
+    async function handleAddPlaylist(playlist) {
+        const newPlaylist = await playlistsAPI.add({track: playlist });
+        setPlaylists([...playlists, newPlaylist]);
     }
-    getPlaylist();
-}, [playlistId]) 
 
     return (
         <>
@@ -31,7 +38,7 @@ useEffect(function () {
                     Playlist List
                 </div>
             )}
-            {/* <PlayListForm /> */}
+            <PlayListForm handleAddPlaylist={handleAddPlaylist} />
         </>
     );
 }

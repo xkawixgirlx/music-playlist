@@ -1,7 +1,7 @@
-import PlayListPage from "../../pages/PlayListPage/PlayListPage";
+import { useState } from 'react';
 
 
-export default function PlayListForm() {
+export default function PlayListForm({ handleAddPlaylist }) {
     return (
 <>
 <h2>PlayListForm</h2>

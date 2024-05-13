@@ -3,9 +3,14 @@ const Schema = mongoose.Schema;
 
 
 
-const playlistSchema = new Schema ({
+const playlistSchema = new Schema({
     name: {
         type: String,
+        required: true,
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
         required: true,
     },
     track: {

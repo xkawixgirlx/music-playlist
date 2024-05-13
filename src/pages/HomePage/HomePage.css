@@ -9,7 +9,7 @@ body {
 a {
     color: black;
     font-size: 1.25rem;
-    font-family: fantasy;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a:hover {

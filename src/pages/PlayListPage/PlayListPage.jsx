@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import * as playlistsAPI from '../../utilities/playlists-api';
 import PlayListForm from '../../components/PlayListForm/PlayListForm';
+import PlayListDetails from '../PlayListDetailsPage/PlayListDetailsPage';
 
 
 export default function PlayListPage() {
     const [playlists, setPlaylists] = useState([]);
     const { playlistId } = useParams();
 
-    
+
     useEffect(function () {
         async function getPlaylists() {
             const playlists = await playlistsAPI.getAll();
@@ -32,7 +33,9 @@ export default function PlayListPage() {
                 <div>
                     {playlists.map((playlist) => (
                         <div key={playlist._id}>
+                            <Link to={`/playlists/${playlist.name}`}>
                             <h3>{playlist.name}</h3>
+                            </Link> 
                         </div>
                     ))}
                 </div>

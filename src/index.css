@@ -4,6 +4,9 @@
   --background: linear-gradient(0deg, rgba(225, 213, 255, 1) 0%, rgba(134, 118, 187, 0.9122242647058824) 50%, rgba(63, 15, 110, 0.9626444327731093) 100%);
   --color: #3f0f6e;
   --lightpurple: #E6E6FA; 
+  --gray: #F5F5F5;
+  --purple2: #8676bb;
+  --gray2: #BEBFC5;
 }
 
 
@@ -25,19 +28,27 @@ a:hover {
 }
 .form-container {
   padding: 3vmin;
-  background-color: var(--lightpurple);
+  /* background-color: var(--gray2); */
+  background-image: url('https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_1280.jpg');
   border: .1vmin solid var(--color);
+  background-size: cover;
+  background-position: center;
   border-radius: 1vmin;
+  width: 85vw;
 }
 form {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
+  width: 100%;
   gap: 1.25vmin;
-  color: var(--color);
+  color: var(--lightpurple);
 }
 button {
   border-radius: 5px;
   border-color: var(--color);
   background-image: linear-gradient(to right, rgb(171, 139, 230), rgb(84, 24, 154));
+  color: var(--gray);
+}
+button:hover {
   color: var(--color);
 }

@@ -9,6 +9,8 @@ export default function NavBar({ setUser }) {
 
   return (
     <nav>
+      <Link to='/playlist'>Playlist</Link> 
+      &nbsp;&nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );

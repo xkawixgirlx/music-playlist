@@ -12,16 +12,16 @@ export default function App() {
 
   return (
     <main className="App">
-        <>
-          <NavBar user={user} setUser={setUser} />
-          <Routes>
-            <Route path="/" element={<HomePage user={user} />} />
-            <Route path='/auth' element={<AuthPage setUser={setUser} />} />
-            <Route path='/playlist' element={<PlayListPage />} />
-            {/* additional Routes... */}
-            <Route path="/*" element={<Navigate to="/auth" />} />
-          </Routes>
-        </>
+      <>
+        <NavBar user={user} setUser={setUser} />
+        <Routes>
+          <Route path="/" element={<HomePage user={user} />} />
+          <Route path='/auth' element={<AuthPage setUser={setUser} />} />
+          <Route path='/playlist' element={<PlayListPage />} />
+          {/* additional Routes... */}
+          <Route path="/*" element={<Navigate to="/auth" />} />
+        </Routes>
+      </>
     </main>
   );
 }

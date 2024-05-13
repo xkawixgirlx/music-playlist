@@ -14,12 +14,12 @@ export default function PlayListForm({ addPlaylist }) {
     }
 
 
-
     function handleSubmit(evt) {
         evt.preventDefault();
         addPlaylist(newPlaylist);
         setNewPlaylist({name: '', track: '' });
     }
+    
 
     return (
         <>

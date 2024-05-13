@@ -8,6 +8,7 @@ export default function PlayListPage() {
     const [playlists, setPlaylists] = useState([]);
     const { playlistId } = useParams();
 
+    
     useEffect(function () {
         async function getPlaylists() {
             const playlists = await playlistsAPI.getAll();
@@ -16,9 +17,11 @@ export default function PlayListPage() {
         getPlaylists();
     }, [playlistId])
 
+
     function addPlaylist(playlist) {
         setPlaylists([...playlists, playlist]);
     }
+
 
     return (
         <>

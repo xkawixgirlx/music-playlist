@@ -3,7 +3,15 @@ const Playlist = require('../../models/playlist');
 
 module.exports = {
     getAll,
+    createPlaylist,
 };
+
+
+async function createPlaylist(req, res) {
+    req.body.user = req.user._id;
+    const playlist = await Playlist.create(req.body);
+    res.json(playlist);
+}
 
 
 

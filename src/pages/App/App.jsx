@@ -17,7 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage user={user} />} />
           <Route path='/auth' element={<AuthPage setUser={setUser} />} />
-          <Route path='/playlist' element={<PlayListPage />} />
+          <Route path='/playlists' element={<PlayListPage />} />
           {/* additional Routes... */}
           <Route path="/*" element={<Navigate to="/auth" />} />
         </Routes>

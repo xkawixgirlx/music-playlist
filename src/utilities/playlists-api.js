@@ -6,3 +6,7 @@ export function getAll() {
     return sendRequest(BASE_URL);
 }
 
+
+export function add(playlist) {
+    return sendRequest(BASE_URL, 'POST', playlist);
+}

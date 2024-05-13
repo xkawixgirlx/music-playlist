@@ -1,49 +1,48 @@
 import { useState } from 'react';
 
 
-export default function PlayListForm({ handleAddPlaylist }) {
-    const [newVideo, setNewVideo] = useState({
-        title: '',
-        artist: '',
-        videoUrl: '',
+export default function PlayListForm({ addPlaylist }) {
+    const [newPlaylist, setNewPlaylist] = useState({
+        name: '',
+        track: ''
     });
+
+
+    function handleChange(evt) {
+        const newPLaylistData = {...newPlaylist, [evt.target.name]: evt.target.value }; 
+        setNewPlaylist(newPLaylistData);
+    }
+
+
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        handleAddPlaylist();
-        setNewVideo(newVideo);
+        addPlaylist(newPlaylist);
+        setNewPlaylist({name: '', track: '' });
     }
 
     return (
         <>
-            <h2>Make a PlayList/Add Tracks</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Youtube URL: </label>
-                <input
-                    name='videoUrl'
-                    value={newVideo.videoUrl}
-                    onChange={() => setNewVideo(newVideo)}
-                    required
-                    pattern='.{2, }'
-                />
-                <label>Artist Name: </label>
-                <input
-                    name='artist'
-                    value={newVideo.artist}
-                    onChange={() => setNewVideo(newVideo)}
-                    required
-                    pattern='.{1, }'
-                />
-                <label>Track Title:  </label>
-                <input
-                    name='title'
-                    value={newVideo.title}
-                    onChange={() => setNewVideo(newVideo)}
-                    required
-                    pattern='.{2, }'
-                />
-                <button type='submit'>Make Playlist/AddTrack</button>
-            </form>
+            <h2>Make a PlayList</h2>
+            <div>
+                <form className='form-container' onSubmit={handleSubmit}>
+                    <label>Name of Playlist: </label>
+                    <input
+                        name='name'
+                        value={newPlaylist.name}
+                        onChange={handleChange}
+                        pattern='.{1,}'
+                    />
+                    <label>Name of First Track: </label>
+                    <input
+                        name='track'
+                        value={newPlaylist.track}
+                        onChange={handleChange}
+                        pattern='.{1,}'
+                    />
+                    <button type='submit'>Make Playlist!</button>
+                </form>
+            </div>
         </>
     );
 }

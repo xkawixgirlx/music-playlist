@@ -9,34 +9,36 @@ export default function NavBar({ setUser }) {
   function handleLogOut() {
     userService.logOut();
     setUser(null);
-    setIsLoggedIn(isLoggedIn);
+    setIsLoggedIn(false);
   }
 
   function openNav() {
-    document.getElementById('nav').classList.add('open');
-    document.body.classList.add('nav-open');
+    document.getElementById('nav').style.width = '250px';
+    document.getElementById('main').style.marginLeft = '250px';
   }
 
   function closeNav() {
-    document.getElementById('nav').classList.remove('open');
-    document.body.classList.remove('nav-open');
+    document.getElementById('nav').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
   }
 
   return (
     <>
-      <nav className='main' id='nav'>
-        <button onClick={openNav}>Nav</button>
-        <Link to='/playlist'>Playlist</Link>
-        <br />
-        {isLoggedIn ? (
-          <Link to='/auth'>Login/Signup</Link>
-        ) : (
-          <Link to="" onClick={handleLogOut}>Log Out</Link>
-        )}
-        <div id="nav" className="sidenav">
-          <Link to="#" className="closebtn" onClick={closeNav}>&times;</Link>
-        </div>
+      <div>
+        <button onClick={openNav}>NavBar</button>
+      </div>
+      <nav className='main' id='main'>
       </nav>
+      <div id="nav" className="sidenav">
+        <Link to="#" className="closebtn" onClick={closeNav}>&times;</Link>
+          <Link to='/playlists'>Playlist</Link>
+          <br />
+          {isLoggedIn ? (
+            <Link to='/auth'>Login/Signup</Link>
+          ) : (
+            <Link to="" onClick={handleLogOut}>Log Out</Link>
+          )}
+      </div>
     </>
   );
 }

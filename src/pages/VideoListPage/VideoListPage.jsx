@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import * as playlistsAPI from '../../utilities/playlists-api';
+import * as videosAPI from '../../utilities/videos-api';
 import VideoItem from '../../components/VideoItem/VideoItem';
 
 
@@ -8,7 +8,7 @@ export default function VideoPageList() {
 
     useEffect(function () {
         async function fetchAllVideos() {
-            const videos = await playlistsAPI.getAllVideos();
+            const videos = await videosAPI.getAllVideos();
             setVideos(videos);
         }
         fetchAllVideos();
@@ -19,7 +19,7 @@ export default function VideoPageList() {
 
     return (
         <>
-            <h2>VideoPageList</h2>
+            <h2>All Videos</h2>
             <section>{videoItems}</section>
         </>
     );

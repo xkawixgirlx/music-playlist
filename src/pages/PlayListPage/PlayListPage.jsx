@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import * as playlistsAPI from '../../utilities/playlists-api';
 import PlayListForm from '../../components/PlayListForm/PlayListForm';
-import PlayListDetails from '../PlayListDetailsPage/PlayListDetailsPage';
 
 
 export default function PlayListPage() {

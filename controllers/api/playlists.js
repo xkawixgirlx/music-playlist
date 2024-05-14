@@ -6,7 +6,17 @@ module.exports = {
     getAll,
     createPlaylist,
     getAllVideos,
+    addNewVideo,
 };
+
+
+
+async function addNewVideo(req, res) {
+    req.body.user = req.user._id;
+    req.body.playlist = req.playlist.name;
+    const video = Video.create(req.body);
+    res.json(video);
+}
 
 
 async function getAllVideos(req, res) {

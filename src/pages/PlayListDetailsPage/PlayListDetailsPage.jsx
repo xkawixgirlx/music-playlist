@@ -4,7 +4,7 @@ import PlaylistDetailsForm from '../../components/PlaylistDetailsForm/PlaylistDe
 import * as playlistsAPI from '../../utilities/playlists-api';
 
 
-export default function PlayListDetails({ setUser }) {
+export default function PlayListDetails() {
     const { playlistName } = useParams();
     const [videos, setVideos] = useState([]);
     const [playlist, setPlaylist] = useState(null);
@@ -22,6 +22,7 @@ export default function PlayListDetails({ setUser }) {
         fetchPlaylist();
     }, [playlistName]);
 
+
     async function addNewVideo(video) {
         try {
             const newMusicVideo = await playlistsAPI.addVideo({ name: playlistName }, video);
@@ -36,8 +37,8 @@ export default function PlayListDetails({ setUser }) {
     return (
         <>
             <div>
-                <h2>PlayList Details</h2>
-                <PlaylistDetailsForm addNewVideo={addNewVideo} videos={videos}/>
+                <h2>Add Video to Playlist</h2>
+                <PlaylistDetailsForm addNewVideo={addNewVideo} />
             </div>
         </>
     );

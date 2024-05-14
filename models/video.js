@@ -10,7 +10,9 @@ const videoSchema = new Schema({
         match: /^<iframe.+www\.youtube\.com\/embed.+<\/iframe>$/
     },
     youTubeId: {
-        type: String, 
+        type: String,
+        required: true,
+        unique: true, 
     },
     title: {
         type: String,

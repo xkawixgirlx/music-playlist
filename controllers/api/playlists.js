@@ -13,16 +13,11 @@ module.exports = {
 
 async function addNewVideo(req, res) {
     try {
-        const video = new Video({
-            youTubeId: req.body.youTubeId,
-            user: req.body._id,
-            videoUrl: req.body.videoUrl,
-            artist: req.body.artist,
-            title: req.body.title,
-        });
-        console.log(req.body);
-        const savedVideo = await video.save();
-        res.json(savedVideo);
+        req.body.youTubeId = req.body.videoUrl.match(/^<iframe.+www\.youtube\.com\/embed\/(.+)\?.+<\/iframe>$/)[1];
+        req.body.user = req.user._id;
+        // Ensure that videoUrl in videoSchema has unique: true set
+        const video = await Video.create(req.body);
+        res.json(video);
     } catch (err) {
         console.log(' Error adding new video', err);
         res.status(500).json({ message: 'Failing at Controller' });

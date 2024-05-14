@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import * as playlistsAPI from '../../utilities/playlists-api';
 import PlayListForm from '../../components/PlayListForm/PlayListForm';
-import PlayListDetails from '../PlayListDetailsPage/PlayListDetailsPage';
 
 
 export default function PlayListPage() {
@@ -19,8 +18,13 @@ export default function PlayListPage() {
     }, [playlistId])
 
 
-    function addPlaylist(playlist) {
-        setPlaylists([...playlists, playlist]);
+    async function addPlaylist(playlist) {
+        try {
+            const newPlaylist = await playlistsAPI.add(playlist);
+            setPlaylists([...playlists, newPlaylist]);
+        } catch (err) {
+            console.log("Couldn't add Playlist:", err);
+        }
     }
 
 
@@ -34,8 +38,8 @@ export default function PlayListPage() {
                     {playlists.map((playlist) => (
                         <div key={playlist._id}>
                             <Link to={`/playlists/${playlist.name}`}>
-                            <h3>{playlist.name}</h3>
-                            </Link> 
+                                <h3>{playlist.name}</h3>
+                            </Link>
                         </div>
                     ))}
                 </div>

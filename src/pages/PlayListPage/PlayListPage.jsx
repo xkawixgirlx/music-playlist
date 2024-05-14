@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import * as playlistsAPI from '../../utilities/playlists-api';
 import PlayListForm from '../../components/PlayListForm/PlayListForm';
+import PlayListDetails from '../PlayListDetailsPage/PlayListDetailsPage';
 
 
 export default function PlayListPage() {
@@ -36,8 +37,8 @@ export default function PlayListPage() {
             ) : (
                 <div>
                     {playlists.map((playlist) => (
-                        <div key={playlist._id}>
-                            <Link to={`/playlists/${playlist.name}`}>
+                        <div>
+                            <Link key={playlist._id} to={`/playlists/${playlist.name}`}>
                                 <h3>{playlist.name}</h3>
                             </Link>
                         </div>

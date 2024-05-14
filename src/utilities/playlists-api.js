@@ -10,3 +10,8 @@ export function getAll() {
 export function add(playlist) {
     return sendRequest(BASE_URL, 'POST', playlist);
 }
+
+
+export function getAllVideos(playlist) {
+    return sendRequest(`${BASE_URL}/${playlist.name}`);
+}

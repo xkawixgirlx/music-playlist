@@ -12,5 +12,8 @@ router.get('/', ensureLoggedIn, playslistsCtrl.getAll);
 // POST /api/playlists (add a new Playlist)
 router.post('/', ensureLoggedIn, playslistsCtrl.createPlaylist);
 
+// GET /api/playlists/:playlistName/videos
+router.get('/:playlistName', ensureLoggedIn, playslistsCtrl.getAllVideos);
+
 
 module.exports = router;

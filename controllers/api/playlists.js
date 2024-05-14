@@ -1,10 +1,20 @@
 const Playlist = require('../../models/playlist');
+const Video = require('../../models/video');
 
 
 module.exports = {
     getAll,
     createPlaylist,
+    getAllVideos,
 };
+
+
+async function getAllVideos(req, res) {
+    const videos = await Video.find({
+        user: req.user._id
+    });
+    res.json(videos);
+}
 
 
 async function createPlaylist(req, res) {

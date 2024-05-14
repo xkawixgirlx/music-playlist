@@ -31,13 +31,13 @@ export default function NavBar({ setUser }) {
       </nav>
       <div id="nav" className="sidenav">
         <Link to="#" className="closebtn" onClick={closeNav}>&times;</Link>
-          <Link to='/playlists'>Playlist</Link>
-          <br />
-          {isLoggedIn ? (
-            <Link to='/auth'>Login/Signup</Link>
-          ) : (
-            <Link to="" onClick={handleLogOut}>Log Out</Link>
-          )}
+        <Link to='/playlists'>Playlist</Link>            
+        <br />
+        {isLoggedIn ? (
+          <Link to='/auth'>Login/Signup</Link>
+        ) : (
+          <Link to="" onClick={handleLogOut}>Log Out</Link>
+        )}
       </div>
     </>
   );

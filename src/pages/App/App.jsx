@@ -7,6 +7,7 @@ import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import PlayListPage from '../PlayListPage/PlayListPage';
 import PlayListDetails from '../PlayListDetailsPage/PlayListDetailsPage';
+import VideoPageList from '../VideoListPage/VideoListPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -20,6 +21,7 @@ export default function App() {
           <Route path='/auth' element={<AuthPage setUser={setUser} />} />
           <Route path='/playlists' element={<PlayListPage />} />
           <Route path='/playlists/:playlistName' element={<PlayListDetails setUser={setUser} />} />
+          <Route path='/videos' element={<VideoPageList />} />
           {/* additional Routes... */}
           <Route path="/*" element={<Navigate to="/auth" />} />
         </Routes>

@@ -12,11 +12,11 @@ export function add(playlist) {
 }
 
 
-export function getAllVideos(playlist) {
-    return sendRequest(`${BASE_URL}/${playlist.name}/videos`);
+export function getAllVideos() {
+    return sendRequest(`/api/videos`);
 }
 
 
 export function addVideo(playlist, video) {
-    return sendRequest(`${BASE_URL}/${playlist.name}/videos`, 'POST', video);
+    return sendRequest(`${BASE_URL}/${playlist._id}/videos`, 'POST', video);
 }

@@ -11,7 +11,6 @@ const videoSchema = new Schema({
     },
     youTubeId: {
         type: String, 
-        required: true,
     },
     title: {
         type: String,

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-export default function PlaylistDetailsForm({ addNewVideo }) {
+export default function PlaylistDetailsForm({ addNewVideo, videos }) {
     const [newVideo, setNewVideo] = useState({
         videoUrl: '',
         artist: '',

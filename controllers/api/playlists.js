@@ -12,10 +12,21 @@ module.exports = {
 
 
 async function addNewVideo(req, res) {
-    req.body.user = req.user._id;
-    req.body.playlist = req.playlist.name;
-    const video = Video.create(req.body);
-    res.json(video);
+    try {
+        const video = new Video({
+            youTubeId: req.body.youTubeId,
+            user: req.body._id,
+            videoUrl: req.body.videoUrl,
+            artist: req.body.artist,
+            title: req.body.title,
+        });
+        console.log(req.body);
+        const savedVideo = await video.save();
+        res.json(savedVideo);
+    } catch (err) {
+        console.log(' Error adding new video', err);
+        res.status(500).json({ message: 'Failing at Controller' });
+    }
 }
 
 

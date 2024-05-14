@@ -31,7 +31,7 @@ export default function PlayListPage() {
     return (
         <>
             <h2>PlayList List Page</h2>
-            {playlists.length === 0 ? (
+            {playlists.name === null ? (
                 <h3>No Playlists Yet!</h3>
             ) : (
                 <div>

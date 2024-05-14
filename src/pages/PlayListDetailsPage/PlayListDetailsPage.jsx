@@ -7,19 +7,24 @@ import * as playlistsAPI from '../../utilities/playlists-api';
 export default function PlayListDetails({ setUser }) {
     const { playlistName } = useParams();
     const [videos, setVideos] = useState([]);
-    const [playlist, setPlaylist] = useState (null);
+    const [playlist, setPlaylist] = useState(null);
 
-    useEffect(function () {
-        async function getVideos() {
-            const videos = await playlistsAPI.getAllVideos({ name: playlistName });
-            setPlaylist(videos);
+    useEffect(() => {
+        async function fetchPlaylist() {
+            try {
+                const fetchedPlaylist = await playlistsAPI.getAllVideos({ name: playlistName });
+                setPlaylist(fetchedPlaylist);
+            } catch (error) {
+                console.error('Error fetching playlist:', error);
+            }
         }
-        getVideos();
+
+        fetchPlaylist();
     }, [playlistName]);
 
     async function addNewVideo(video) {
         try {
-            const newMusicVideo = await playlistsAPI.addVideo(playlist, video);
+            const newMusicVideo = await playlistsAPI.addVideo({ name: playlistName }, video);
             setVideos([...videos, newMusicVideo]);
         } catch (err) {
             console.log(`Video couldn't be added`, err);
@@ -32,7 +37,7 @@ export default function PlayListDetails({ setUser }) {
         <>
             <div>
                 <h2>PlayList Details</h2>
-                <PlaylistDetailsForm addNewVideo={addNewVideo} />
+                <PlaylistDetailsForm addNewVideo={addNewVideo} videos={videos}/>
             </div>
         </>
     );

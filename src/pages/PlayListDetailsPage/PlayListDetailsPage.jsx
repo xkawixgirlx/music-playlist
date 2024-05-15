@@ -28,10 +28,10 @@ export default function PlayListDetails() {
 
         async function getVideosForCarousel() {
             try {
-                const addToVideosCarousel = await videosAPI.getVideosForCarousel();
-                setVideos(addToVideosCarousel);
+                const viewVideosCarousel = await videosAPI.getVideosForCarousel();
+                setVideos(viewVideosCarousel);
             } catch (err) {
-                console.log(`Video couldn't be added`, err);
+                console.log(`Error fetching videos`, err);
             }
         }
         getVideosForCarousel();

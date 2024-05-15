@@ -27,34 +27,32 @@ export default function NewVideoForm({ addNewVideoToPlaylist }) {
 
 
     return (
-        <>
+        <div>
             <h2>New Video Form</h2>
-            <div>
-                <form className='form-container' onSubmit={handleSubmit}>
-                    <label>Youtube URL: </label>
-                    <input
-                        name='videoUrl'
-                        value={newVideo.videoUrl}
-                        onChange={handleChange}
-                        pattern='.{2,}'
-                    />
-                    <label>Artist Name: </label>
-                    <input
-                        name='artist'
-                        value={newVideo.artist}
-                        onChange={handleChange}
-                        pattern='.{1,}'
-                    />
-                    <label>Track Title:  </label>
-                    <input
-                        name='title'
-                        value={newVideo.title}
-                        onChange={handleChange}
-                        pattern='.{2,}'
-                    />
-                    <button type='submit'>Add Music Video</button>
-                </form>
-            </div>
-        </>
+            <form className='form-container' onSubmit={handleSubmit}>
+                <label>Youtube URL: </label>
+                <input
+                    name='videoUrl'
+                    value={newVideo.videoUrl}
+                    onChange={handleChange}
+                    pattern='.{2,}'
+                />
+                <label>Artist Name: </label>
+                <input
+                    name='artist'
+                    value={newVideo.artist}
+                    onChange={handleChange}
+                    pattern='.{1,}'
+                />
+                <label>Track Title:  </label>
+                <input
+                    name='title'
+                    value={newVideo.title}
+                    onChange={handleChange}
+                    pattern='.{2,}'
+                />
+                <button type='submit'>Add Music Video</button>
+            </form>
+        </div>
     );
 }

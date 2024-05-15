@@ -23,7 +23,7 @@ export default function NavBar({ setUser }) {
   }
 
   return (
-    <>
+    <div>
       <div>
         <button onClick={openNav}>NavBar</button>
       </div>
@@ -31,8 +31,9 @@ export default function NavBar({ setUser }) {
       </nav>
       <div id="nav" className="sidenav">
         <Link to="#" className="closebtn" onClick={closeNav}>&times;</Link>
-        <Link to='/playlists'>All Playlists</Link>   
-        <Link to='/videos'>All Videos</Link>         
+        <Link to='/'>Home Page</Link>
+        <Link to='/playlists'>My Playlists</Link>
+        <Link to='/videos'>All Videos</Link>
         <br />
         {isLoggedIn ? (
           <Link to='/auth'>Login/Signup</Link>
@@ -40,6 +41,6 @@ export default function NavBar({ setUser }) {
           <Link to="" onClick={handleLogOut}>Log Out</Link>
         )}
       </div>
-    </>
+    </div>
   );
 }

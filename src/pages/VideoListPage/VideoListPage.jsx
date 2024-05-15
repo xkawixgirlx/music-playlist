@@ -18,9 +18,9 @@ export default function VideoPageList() {
 
 
     return (
-        <>
+        <div>
             <h2>All Videos</h2>
             <section>{videoItems}</section>
-        </>
+        </div>
     );
 }

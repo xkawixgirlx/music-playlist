@@ -14,7 +14,6 @@ export default function App() {
 
   return (
     <main className="App">
-      <>
         <NavBar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" element={<HomePage user={user} />} />
@@ -25,7 +24,6 @@ export default function App() {
           {/* additional Routes... */}
           <Route path="/*" element={<Navigate to="/auth" />} />
         </Routes>
-      </>
     </main>
   );
 }

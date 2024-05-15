@@ -1,7 +1,5 @@
 /* CSS Custom Properties */
 :root {
-  --background: rgb(225, 213, 255);
-  --background: linear-gradient(0deg, rgba(225, 213, 255, 1) 0%, rgba(134, 118, 187, 0.9122242647058824) 50%, rgba(63, 15, 110, 0.9626444327731093) 100%);
   --color: #3f0f6e;
   --lightpurple: #E6E6FA; 
   --gray: #F5F5F5;
@@ -11,20 +9,22 @@
 
 
 body {
-  color: #3f0f6e;
+  background: #8676bb;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100vh;
+  width: auto;
 }
 
 
 a {
-  color: black;
-  font-size: 1.5rem;
+  color: var(--gray);
+  font-size: 1.25rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
 a:hover {
-  color: #3f0f6e;
+  color: var(--color);
 
 }
 
@@ -41,7 +41,7 @@ a:hover {
 form {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  width: 100%;
+  width: 90%;
   gap: 1.25vmin;
   color: var(--lightpurple);
 }
@@ -56,4 +56,5 @@ button {
 button:hover {
   color: var(--color);
 }
+
 

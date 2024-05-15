@@ -1,27 +1,3 @@
-body {
-    background: #8676bb;
-    background-size: 100%;
-    height: 100%vh;
-    width: 100%;
-}
-
-
-a {
-    color: black;
-    font-size: 1.25rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-a:hover {
-    color: white;
-
-}
-
-footer {
-    position: center;
-
-}
-
 img {
     height: auto;
     width: 100vmin;

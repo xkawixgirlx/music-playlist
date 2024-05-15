@@ -67,7 +67,7 @@ button:hover {
 .video-container {
   background-color: rgba(0, 0, 0, 0.35);
   border-radius: 50px;
-  padding: 15px 0 8px;
+  padding: 25px 0 8px;
   box-shadow: 3px 3px 40px var(--darkpurple);
 }
 

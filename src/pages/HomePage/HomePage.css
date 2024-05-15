@@ -1,4 +1,6 @@
 img {
     height: auto;
     width: 100vmin;
+    box-shadow: 2px 2px 15px black;
+    margin: 0 0 15px; 
 }

@@ -3,6 +3,7 @@ const Video = require('../../models/video');
 
 module.exports = { 
     getAllVideos,
+    getVideosForCarousel,
     addNewVideo,
 };
 
@@ -19,6 +20,12 @@ async function addNewVideo(req, res) {
         console.log(' Error adding new video', err);
         res.status(500).json({ message: 'Failing at Controller' });
     }
+}
+
+
+async function getVideosForCarousel(req, res) {
+    const videos = await Video.find({});
+    res.json(videos);
 }
 
 

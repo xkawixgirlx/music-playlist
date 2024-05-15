@@ -8,3 +8,6 @@ export function getAllVideos() {
 }
 
 
+export function getVideosForCarousel() {
+    return sendRequest(BASE_URL);
+}

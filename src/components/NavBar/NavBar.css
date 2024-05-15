@@ -1,3 +1,12 @@
+:root {
+  --color: #3f0f6e;
+  --lightpurple: #E6E6FA;
+  --gray: #F5F5F5;
+  --purple2: #8676bb;
+  --gray2: #BEBFC5;
+  --darkpurple: #1c0534;
+}
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -20,12 +29,12 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: white;
+    color: var(--lightpurple);
     display: block;
     transition: 0.3s; /* Add transition */
   }
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: var(--purple2);
   }
   .closebtn {
     position: absolute;

@@ -4,7 +4,6 @@ import { useState } from 'react';
 export default function PlayListForm({ addPlaylist }) {
     const [newPlaylist, setNewPlaylist] = useState({
         name: '',
-        track: ''
     });
 
 
@@ -17,7 +16,7 @@ export default function PlayListForm({ addPlaylist }) {
     function handleSubmit(evt) {
         evt.preventDefault();
         addPlaylist(newPlaylist);
-        setNewPlaylist({name: '', track: '' });
+        setNewPlaylist({name: ''});
     }
     
 
@@ -30,13 +29,6 @@ export default function PlayListForm({ addPlaylist }) {
                     <input
                         name='name'
                         value={newPlaylist.name}
-                        onChange={handleChange}
-                        pattern='.{1,}'
-                    />
-                    <label>Name of First Track: </label>
-                    <input
-                        name='track'
-                        value={newPlaylist.track}
                         onChange={handleChange}
                         pattern='.{1,}'
                     />

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-export default function PlaylistDetailsForm({ addNewVideo }) {
+export default function NewVideoForm({ addNewVideoToPlaylist }) {
     const [newVideo, setNewVideo] = useState({
         videoUrl: '',
         artist: '',
@@ -17,7 +17,7 @@ export default function PlaylistDetailsForm({ addNewVideo }) {
 
     function handleSubmit(evt) {
         evt.preventDefault();
-        addNewVideo(newVideo);
+        addNewVideoToPlaylist(newVideo);
         setNewVideo({
             videoUrl: '',
             artist: '',
@@ -28,7 +28,7 @@ export default function PlaylistDetailsForm({ addNewVideo }) {
 
     return (
         <>
-            <h2>PlaylistDetailsForm</h2>
+            <h2>New Video Form</h2>
             <div>
                 <form className='form-container' onSubmit={handleSubmit}>
                     <label>Youtube URL: </label>

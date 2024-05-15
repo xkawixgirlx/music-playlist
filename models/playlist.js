@@ -12,12 +12,8 @@ const playlistSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true,
-    },
-    track: {
-        type: String,
-        required: true,
-    },
-    video: [{
+    },  
+    videos: [{
         type: Schema.Types.ObjectId,
         ref: 'Video'
     }],

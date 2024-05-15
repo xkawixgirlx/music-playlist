@@ -55,12 +55,14 @@ export default function PlayListDetails() {
 
 
     const videoItems = playlist.videos.map((v) => <VideoItem video={v} key={v._id} />)
-    const videoCarousel = videos.map((vid) => <VideoCarousel video={vid} key={vid._id} addNewVideoToPlaylist={addNewVideoToPlaylist}  />)
+    const videoCarousel = videos.map((vid) => <VideoCarousel video={vid} key={vid._id} addNewVideoToPlaylist={addNewVideoToPlaylist} />)
 
     return (
         <div>
             <h2>Add Video to Playlist</h2>
-            <section>{videoItems}</section>
+            <div className='video-container'>
+                    {videoItems}
+            </div>
             <NewVideoForm addNewVideoToPlaylist={addNewVideoToPlaylist} />
             <Carousel>{videoCarousel}</Carousel>
         </div>

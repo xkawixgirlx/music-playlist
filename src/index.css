@@ -1,20 +1,25 @@
 /* CSS Custom Properties */
 :root {
   --color: #3f0f6e;
-  --lightpurple: #E6E6FA; 
+  --lightpurple: #E6E6FA;
   --gray: #F5F5F5;
   --purple2: #8676bb;
   --gray2: #BEBFC5;
+  --darkpurple: #1c0534;
 }
-
+*{
+  box-sizing: border-box;
+}
 
 body {
-  background: #8676bb;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: rgb(179, 155, 237);
+  background-image: radial-gradient(circle, rgba(179, 155, 237, 0.9472163865546218) 0%, rgba(103, 67, 168, 0.9122242647058824) 50%, rgba(53, 10, 96, 0.9626444327731093));
+  background-size: cover;
   height: 100vh;
-  width: auto;
+  width: 95vw;
+  padding: 0 3px 0 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 
 a {
   color: var(--gray);
@@ -34,16 +39,19 @@ a:hover {
   border: .1vmin solid var(--color);
   background-size: cover;
   background-position: center;
+  box-shadow: 2px 3px 15px black;
   border-radius: 1vmin;
-  width: 85vw;
+  width: 93vw;
 }
 
 form {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  width: 90%;
+  width: 95%;
   gap: 1.25vmin;
   color: var(--lightpurple);
+  justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -56,5 +64,17 @@ button {
 button:hover {
   color: var(--color);
 }
+.video-container {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 50px;
+  padding: 15px 0 8px;
+  box-shadow: 3px 3px 40px var(--darkpurple);
+}
 
+p {
+  color: var(--lightpurple);
+  text-shadow: 2px 2px 5px #1c0534;
+  font-size: 1.25rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 

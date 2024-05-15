@@ -22,7 +22,7 @@ export default function PlayListForm({ addPlaylist }) {
 
     return (
         <div>
-            <h2>Make a PlayList</h2>
+            <h2>Make A New PlayList</h2>
             <form className='form-container' onSubmit={handleSubmit}>
                 <label>Name of Playlist: </label>
                 <input

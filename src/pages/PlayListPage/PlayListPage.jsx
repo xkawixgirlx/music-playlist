@@ -29,9 +29,9 @@ export default function PlayListPage() {
 
 
     return (
-        <>
-            <h2>PlayList List Page</h2>
-            {playlists.name === null ? (
+        <div>
+            <h2>My Playlists Page</h2>
+            {playlists.length === 0 ? (
                 <h3>No Playlists Yet!</h3>
             ) : (
                 <div>
@@ -45,6 +45,6 @@ export default function PlayListPage() {
                 </div>
             )}
             <PlayListForm addPlaylist={addPlaylist} />
-        </>
+        </div>
     );
 }

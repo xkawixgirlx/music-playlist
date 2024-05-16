@@ -29,12 +29,17 @@ export default function NavBar({ setUser, user }) {
       <div id="nav" className="sidenav">
         <Link to="#" className="closebtn" onClick={closeNav}>&times;</Link>
         <Link to='/'>Home Page</Link>
+        {user ?
+        <>
         <Link to='/playlists'>My Playlists</Link>
         <Link to='/videos'>All Videos</Link>
+        </>
+          : 'hidden'
+        }
         <br />
-        {user ? 
+        {user ?
           <Link to="" onClick={handleLogOut}>Log Out</Link>
-          : 
+          :
           <Link to='/auth'>Login/Signup</Link>
         }
       </div>

@@ -49,3 +49,6 @@
   background-image: linear-gradient(to right, rgb(171, 139, 230), rgb(84, 24, 154));
   color: var(--gray);
   }
+  button.login-signup {
+    margin: 0 3px 15px;
+  }

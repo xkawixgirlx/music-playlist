@@ -52,6 +52,7 @@ form {
   color: var(--lightpurple);
   justify-content: center;
   align-items: center;
+  margin: 8px 0;
 }
 
 button {
@@ -76,5 +77,11 @@ p {
   text-shadow: 2px 2px 5px #1c0534;
   font-size: 1.25rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.video-item {
+  width: 93vw;
+  box-shadow: 3px 3px 40px var(--darkpurple);
+  border-radius: 20px;
+  padding: 8px 0; 
 }
 

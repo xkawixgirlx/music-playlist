@@ -17,7 +17,7 @@ body {
   background-size: cover;
   height: 100vh;
   width: 95vw;
-  padding: 0 3px 0 14px;
+  padding: 0 3px 0 12px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -78,17 +78,20 @@ p {
   font-size: 1.25rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+p.track {
+  padding-bottom: 12px;
+}
 .video-item {
   width: 94vw;
-  box-shadow: 3px 3px 40px var(--darkpurple);
   border-radius: 20px;
   padding: 12px 0; 
 }
 iframe {
-  width: 90vw;
-  height: 65vh;
-  padding: 0 8px;
+  width: 94vw;
+  height: 45vh;
+  padding: 0;
   margin-right: 8px;
+  box-shadow: 3px 3px 40px 3px var(--darkpurple);
 }
 
 

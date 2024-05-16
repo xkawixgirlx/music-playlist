@@ -106,5 +106,8 @@ button.add-to-playlist-btn {
   padding: 5px 12px;
   border-radius: 10px;
 }
-
+button.enter-btn {
+  border-radius: 10px;
+  padding: 3px 12px;
+}
 

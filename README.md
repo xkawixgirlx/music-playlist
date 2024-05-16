@@ -3,7 +3,6 @@ This is an app that I made because I love music and thought it would be a cool t
 
 # Screenshots
 
-<img src="public/Youtube_Carousel.jpg">
 <img src="public/Videos_Desktop.png">
 <img src="public/Playlists_Desktop.png">
 <img src="public/Playlist_Mobile.jpg">

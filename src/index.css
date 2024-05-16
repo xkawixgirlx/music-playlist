@@ -17,7 +17,7 @@ body {
   background-size: cover;
   height: 100vh;
   width: 95vw;
-  padding: 0 3px 0 18px;
+  padding: 0 3px 0 14px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -79,9 +79,16 @@ p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .video-item {
-  width: 93vw;
+  width: 94vw;
   box-shadow: 3px 3px 40px var(--darkpurple);
   border-radius: 20px;
-  padding: 8px 0; 
+  padding: 12px 0; 
 }
+iframe {
+  width: 90vw;
+  height: 65vh;
+  padding: 0 8px;
+  margin-right: 8px;
+}
+
 

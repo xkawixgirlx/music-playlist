@@ -7,8 +7,7 @@ export default function VideoCarousel({ video, addNewVideoToPlaylist }) {
 
     return (
         <div>
-            <br />
-            <div dangerouslySetInnerHTML={{ __html: video.videoUrl }} />
+            <div class='carousel-element' dangerouslySetInnerHTML={{ __html: video.videoUrl }} />
             <button onClick={() => addNewVideoToPlaylist(video)} className="add-to-playlist-btn"> Add to Playlist</button>
         </div>
     );

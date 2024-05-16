@@ -28,7 +28,6 @@ export default function NewVideoForm({ addNewVideoToPlaylist }) {
 
     return (
         <div>
-            <h2>New Video Form</h2>
             <form className='form-container' onSubmit={handleSubmit}>
                 <label>Youtube URL: </label>
                 <input

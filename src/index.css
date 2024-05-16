@@ -17,7 +17,7 @@ body {
   background-size: cover;
   height: 100vh;
   width: 95vw;
-  padding: 0 3px 0 12px;
+  padding: 0 2px 0 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -99,7 +99,7 @@ iframe {
 ul.control-dots {
   padding: 0;
   margin: 0;
-  top: 82%;
+  top: 75%;
 }
 button.add-to-playlist-btn {
   font-size: 1.3rem;
@@ -110,4 +110,8 @@ button.enter-btn {
   border-radius: 10px;
   padding: 3px 12px;
 }
-
+button.nav-btn {
+  border-radius: 10px;
+  padding: 3px 12px;
+  font-size: 1rem;
+}

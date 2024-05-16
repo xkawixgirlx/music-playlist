@@ -1,15 +1,12 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import * as userService from '../../utilities/users-service';
 
-export default function NavBar({ setUser }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+export default function NavBar({ setUser, user }) {
 
   function handleLogOut() {
     userService.logOut();
     setUser(null);
-    setIsLoggedIn(false);
   }
 
   function openNav() {
@@ -25,7 +22,7 @@ export default function NavBar({ setUser }) {
   return (
     <div>
       <div>
-        <button onClick={openNav}>NavBar</button>
+        <button class='nav-btn' onClick={openNav}>NavBar</button>
       </div>
       <nav className='main' id='main'>
       </nav>
@@ -35,11 +32,11 @@ export default function NavBar({ setUser }) {
         <Link to='/playlists'>My Playlists</Link>
         <Link to='/videos'>All Videos</Link>
         <br />
-        {isLoggedIn ? (
-          <Link to='/auth'>Login/Signup</Link>
-        ) : (
+        {user ? 
           <Link to="" onClick={handleLogOut}>Log Out</Link>
-        )}
+          : 
+          <Link to='/auth'>Login/Signup</Link>
+        }
       </div>
     </div>
   );

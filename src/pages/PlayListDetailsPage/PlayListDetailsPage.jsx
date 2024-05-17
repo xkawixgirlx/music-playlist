@@ -62,7 +62,7 @@ export default function PlayListDetails() {
             <h2>Add Video to Playlist</h2>
             <NewVideoForm addNewVideoToPlaylist={addNewVideoToPlaylist} />
             <div className='video-container'>
-                    {videoItems}
+                {videoItems}
             </div>
             <Carousel>{videoCarousel}</Carousel>
         </div>

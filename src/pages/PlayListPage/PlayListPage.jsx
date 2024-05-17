@@ -37,7 +37,7 @@ export default function PlayListPage() {
                 <div>
                     {playlists.map((playlist) => (
                         <div key={playlist._id}>
-                            <Link  to={`/playlists/${playlist._id}`}>
+                            <Link to={`/playlists/${playlist._id}`}>
                                 <h3>{playlist.name}</h3>
                             </Link>
                         </div>

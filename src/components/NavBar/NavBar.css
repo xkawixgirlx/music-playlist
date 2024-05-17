@@ -8,47 +8,56 @@
 }
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s; /* Add transition */
-    padding-top: 60px;
-  }
-  .sidenav.open {
-    width: 250px;
-  }
-  body.nav-open {
-    background-color: rgba(0,0,0,0.4);
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--lightpurple);
-    display: block;
-    transition: 0.3s; /* Add transition */
-  }
-  .sidenav a:hover {
-    color: var(--purple2);
-  }
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  button {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  /* Add transition */
+  padding-top: 60px;
+}
+
+.sidenav.open {
+  width: 250px;
+}
+
+body.nav-open {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--lightpurple);
+  display: block;
+  transition: 0.3s;
+  /* Add transition */
+}
+
+.sidenav a:hover {
+  color: var(--purple2);
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+button {
   border-radius: 5px;
   border-color: var(--color);
   background-image: linear-gradient(to right, rgb(171, 139, 230), rgb(84, 24, 154));
   color: var(--gray);
-  }
-  button.login-signup {
-    margin: 0 3px 15px;
-  }
+}
+
+button.login-signup {
+  margin: 0 3px 15px;
+}
